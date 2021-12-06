@@ -40,8 +40,8 @@ Obs.: Pesquisei e encontrei o .split() que resolve praticamente todo o problema.
 
 Agora é a hora de fazer a magica acontecer. Ta começando a ficar bom isso pois pra resolver agora só vamos precisar criar um return com a string.split() e dentro das aspas vamos colocar o separador. Como Trybe é uma mãe ela já nos passou o separador que fica desse jeito no código abaixo.
 */
-function splitSentence() {
-
+function splitSentence(string) {
+  return string.split(' ');
 }
 
 // Desafio 4

@@ -45,9 +45,15 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+/*
+Primeiro defini o parametro array depois criei uma let e fui direto resolver a questão pondo um .push. Foi ai que persebi que meu return precisa ser uma string. Aparir desse ponto apaguei o .push e simplesmente deixei o array na ultima posição e concatenei com a primeira, dai o ESLint corrigiu com esse cifrão. Isso me fez pesquisar e descobri que na verdade isso é um template literal. Da hora né.
+
+Depois de muito fuçar o debbuger eu entendi mais ou menos a implementação do string literal. Acontece que o acento agudo permite expressões dentro dele e concatenações sem precisar do +.
+*/
+function concatName(array) {
+  return `${array[array.length - 1]}, ${array[0]}`;
 }
+console.log(concatName(['vida', 'e', 'morte']));
 
 // Desafio 5
 function footballPoints() {

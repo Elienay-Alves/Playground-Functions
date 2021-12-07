@@ -12,16 +12,18 @@
 
 function fizzBuzz(numbers) {
   let anwser = [];
-  if (numbers % 3 === 0) {
-    anwser.push('fizz');
-  } if (numbers % 5 === 0) {
-    anwser.push('buzz');
-  } if (numbers % 3 && 5 === 0) {
-    anwser.push('fizzbuzz');
-  } else {
-    anwser.push('bug');
+
+  for (let i = 0; i < numbers.length; i += 1) {
+    if (numbers[i] % 3 === 0 && numbers[i] % 5 === 0) {
+      anwser.push('fizzBuzz');
+    } else if (numbers[i] % 3 === 0) {
+      anwser.push('fizz');
+    } else if (numbers[i] % 5 === 0) {
+      anwser.push('buzz');
+    } else {
+      anwser.push('bug!');
+    }
   }
   return anwser;
 }
-
-console.log(fizzBuzz([]));
+fizzBuzz();

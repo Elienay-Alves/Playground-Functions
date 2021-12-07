@@ -95,10 +95,23 @@ function highestCount(number) {
   }
   return contador;
 }
-console.log(highestCount([1, 9, 2, 3, 9, 5, 7]));
+highestCount([1, 9, 2, 3, 9, 5, 7]);
+
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+/*
+  Ok. Esse eu empaquei, porém o Bruno fez meu cerebro voltar a raciocinar e... Consegui. O unico problema é que o ESLint ta acusando erro de compatibilidade. Depois vou procurar um jeito de melhorar esse código.
+
+  Edit:
+*/
+function catAndMouse(mouse, cat1, cat2) {
+  let dCat1 = mouse - cat1;
+  let dCat2 = mouse - cat2;
+
+  if ((dCat1 < mouse && dCat1 > dCat2) || (dCat1 > mouse && dCat1 < dCat2)) {
+    return 'cat1';
+  } if ((dCat2 < mouse && dCat2 > dCat1) || (dCat2 > mouse && dCat2 < dCat1)) {
+    return 'cat2';
+  } return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8

@@ -1,24 +1,11 @@
-function highestCount(number) {
-  let highest = number[0];
+function catAndMouse(mouse, cat1, cat2) {
+  let dCat1 = mouse - cat1;
+  let dCat2 = mouse - cat2;
 
-  for (let index = 0; index < number.length - 1; index += 1) {
-    if (number[index] > highest) {
-      highest = number[index];
-    } if (number[index] < 0) {
-      highest = -1;
-    }
-  }
-  return highest;
+  if ((dCat1 < mouse && dCat1 > dCat2) || (dCat1 > mouse && dCat1 < dCat2)) {
+    return 'cat1';
+  } if ((dCat2 < mouse && dCat2 > dCat1) || (dCat2 > mouse && dCat2 < dCat1)) {
+    return 'cat 2';
+  } return 'os gatos trombam e o rato foge';
 }
-
-function maiorNumero(number) {
-  let highest = highestCount(number);
-  let contador = 0;
-  for (let index of number) {
-    if (index === highest) {
-      contador += 1;
-    }
-  }
-  return contador;
-}
-console.log(maiorNumero([-2, -2, -1, -1, -1]));
+catAndMouse(1, 2, 3);

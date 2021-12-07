@@ -64,12 +64,38 @@ console.log(concatName(['vida', 'e', 'morte']));
 function footballPoints(win, tie) {
   return (win * 3) + tie;
 }
+footballPoints(7, 1);
+// P.S.: Estou aproveitando os comments pra treinar digitação dinamica.
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+/*
+  Ok, essa foi mais complexa. O meu maior maior problema foi fazer a segunda função. Após faze-la tive que voltar na primeira e fazer a condicional para números negativos e agora que acabei esse desafio vou comemorar um som altão pra atrapalhar o vizinho a dormir (brinks kk ou será que não?).
+*/
+// let number = [0, 2, 2, 1, 0];
+function justOneHighNumber(number) {
+  let highest = number[0];
+
+  for (let index = 0; index < number.length - 1; index += 1) {
+    if (number[index] > highest) {
+      highest = number[index];
+    } if (number[index] < 0) {
+      highest = -1;
+    }
+  }
+  return highest;
 }
 
+function highestCount(number) {
+  let highest = justOneHighNumber(number);
+  let contador = 0;
+  for (let index of number) {
+    if (index === highest) {
+      contador += 1;
+    }
+  }
+  return contador;
+}
+console.log(highestCount([1, 9, 2, 3, 9, 5, 7]));
 // Desafio 7
 function catAndMouse() {
   // seu código aqui

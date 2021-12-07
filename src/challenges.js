@@ -56,8 +56,13 @@ function concatName(array) {
 console.log(concatName(['vida', 'e', 'morte']));
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+/*
+  Depois de encucar sobre o que a Ellen e o Lucas falaram sobre o return fui pesquisar mais sobre ele e percebi que não preciso mandar os calculos para uma let para depois retornar ela pois o return sozinho faz(bem parecido com o console.log). Pensando em como até agora os exercicios não estão complexos(estranho isso!) vamos ao raciocinio do desafio atual.
+
+  Se wins vale 3 e ties vale é só a gente multiplicar win por 3 e somar com tie. Desse jeito:
+*/
+function footballPoints(win, tie) {
+  return (win * 3) + tie;
 }
 
 // Desafio 6

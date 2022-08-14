@@ -1,18 +1,5 @@
 // Desafio 1
-function compareTrue(parameter1, parameter2) {
-  if (parameter1 === true && parameter2 === true) {
-    return true;
-  }
-  return false;
-}
-compareTrue();
-/*
-Para a resolução desse primeiro desafio eu primeiro separei o que se pedia e como poderia implementar.
-
-Depois eu fui para o baby steps onde criei os parametros e depois fiz a comparação consolando para ver se deu certo.
-
-Após isso fiz um return para true e acabei por colocar nessa função apenas mais return com o false a pedido do eslint.
-*/
+const comparision = (p1, p2) => (p1 === true && p2 === true) ? true : false;
 
 // Desafio 2
 function calcArea(base, height) {
@@ -147,7 +134,7 @@ function decode() {
 module.exports = {
   calcArea,
   catAndMouse,
-  compareTrue,
+  comparision,
   concatName,
   decode,
   encode,

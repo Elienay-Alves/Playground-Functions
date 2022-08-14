@@ -1,6 +1,7 @@
 // Desafio 1
-const comparision = (p1, p2) => (p1 === true && p2 === true) ? true : false;
+const comparision = (p1, p2) => (p1 === true && p2 === true);
 
+comparision();
 // Desafio 2
 function calcArea(base, height) {
   let resultado = (base * height) / 2;

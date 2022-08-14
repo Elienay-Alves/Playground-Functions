@@ -1,47 +1,14 @@
 // Desafio 1
-const comparision = (p1, p2) => (p1 === true && p2 === true);
+const compareTrue = (p1, p2) => (p1 === true && p2 === true);
 
-comparision();
 // Desafio 2
-function calcArea(base, height) {
-  let resultado = (base * height) / 2;
-  return resultado;
-}
-calcArea();
-/*
-Nesse desafio acabei por usar conceitos do processo seletivo. usei colinha do próprio github para codar o calculo e fiz a interpretação do desafio.
-
-Definidos os parametros base e height criei uma let para receber o resultado, ou seja, a area.
-
-Após isso simplesmente fiz o calculo proposto dentro da variavel resultado e retornei o resultado.
-*/
+const calcArea = (base, height) =>(base * height) / 2;
 
 // Desafio 3
-/*
-Implementação:
-Preciso que receba um valor em '' (string), e retorne(return) isso em uma lista separando cada palavra por espaço dentro de um index(posição) diferente.
-
-Criando o Algoritmo:
-Primeiro precisamos declarar a variavel que se será chamada na função. Depois precisamos que ela seja lida, interpretada e jogada para dentro de um array, até o presente momento não sei como fazer isso sem talvez passar um for.
-
-Obs.: Pesquisei e encontrei o .split() que resolve praticamente todo o problema. Se liga na documentação: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/split
-
-Agora é a hora de fazer a magica acontecer. Ta começando a ficar bom isso pois pra resolver agora só vamos precisar criar um return com a string.split() e dentro das aspas vamos colocar o separador. Como Trybe é uma mãe ela já nos passou o separador que fica desse jeito no código abaixo.
-*/
-function splitSentence(string) {
-  return string.split(' ');
-}
+const splitSentence = (string) => string.split(' ');
 
 // Desafio 4
-/*
-Primeiro defini o parametro array depois criei uma let e fui direto resolver a questão pondo um .push. Foi ai que persebi que meu return precisa ser uma string. Aparir desse ponto apaguei o .push e simplesmente deixei o array na ultima posição e concatenei com a primeira, dai o ESLint corrigiu com esse cifrão. Isso me fez pesquisar e descobri que na verdade isso é um template literal. Da hora né.
-
-Depois de muito fuçar o debbuger eu entendi mais ou menos a implementação do string literal. Acontece que o acento agudo permite expressões dentro dele e concatenações sem precisar do +.
-*/
-function concatName(array) {
-  return `${array[array.length - 1]}, ${array[0]}`;
-}
-console.log(concatName(['vida', 'e', 'morte']));
+const concatName = (array) => `${array.length - 1}, ${array[0]}`;
 
 // Desafio 5
 /*
@@ -135,7 +102,7 @@ function decode() {
 module.exports = {
   calcArea,
   catAndMouse,
-  comparision,
+  compareTrue,
   concatName,
   decode,
   encode,

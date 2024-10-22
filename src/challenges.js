@@ -2,7 +2,7 @@
 const compareTrue = (p1, p2) => (p1 === true && p2 === true);
 
 // Desafio 2
-const calcArea = (base, height) =>(base * height) / 2;
+const calcArea = (base, height) => (base * height) / 2;
 
 // Desafio 3
 const splitSentence = (string) => string.split(' ');

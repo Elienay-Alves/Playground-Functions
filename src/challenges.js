@@ -8,11 +8,7 @@ const concatName = (array) => `${array.length - 1}, ${array[0]}`;
 
 const footballPoints = (wins, ties) => (wins * 3) + ties;
 
-const highestCount = (numbers) => {
-  const maxNumber = Math.max(...numbers);
-  const count = numbers.filter((num) => num === maxNumber).length;
-  return count;
-};
+const highestCount = (array) => array.filter((num) => num === Math.max(...array)).length;
 
 // Desafio 7
 /*
@@ -51,7 +47,6 @@ function fizzBuzz(numbers) {
   }
   return anwser;
 }
-console.log(fizzBuzz(2, 9, 25));
 
 // Desafio 9
 function encode() {

@@ -14,8 +14,6 @@ const highestCount = (numbers) => {
   return count;
 };
 
-console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
-
 // Desafio 7
 /*
   Ok. Esse eu empaquei, porém o Bruno fez meu cerebro voltar a raciocinar e... Consegui. O unico problema é que o ESLint ta acusando erro de compatibilidade. Depois vou procurar um jeito de melhorar esse código.

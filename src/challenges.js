@@ -1,56 +1,20 @@
-// Desafio 1
-const compareTrue = (p1, p2) => (p1 === true && p2 === true);
+const compareTrue = (parameter1, parameter2) => (parameter1 === true && parameter2 === true);
 
-// Desafio 2
 const calcArea = (base, height) => (base * height) / 2;
 
-// Desafio 3
 const splitSentence = (string) => string.split(' ');
 
-// Desafio 4
 const concatName = (array) => `${array.length - 1}, ${array[0]}`;
 
-// Desafio 5
-/*
-  Depois de encucar sobre o que a Ellen e o Lucas falaram sobre o return fui pesquisar mais sobre ele e percebi que não preciso mandar os calculos para uma let para depois retornar ela pois o return sozinho faz(bem parecido com o console.log). Pensando em como até agora os exercicios não estão complexos(estranho isso!) vamos ao raciocinio do desafio atual.
+const footballPoints = (wins, ties) => (wins * 3) + ties;
 
-  Se wins vale 3 e ties vale é só a gente multiplicar win por 3 e somar com tie. Desse jeito:
-*/
-function footballPoints(win, tie) {
-  return (win * 3) + tie;
-}
-footballPoints(7, 1);
-// P.S.: Estou aproveitando os comments pra treinar digitação dinamica.
+const highestCount = (numbers) => {
+  const maxNumber = Math.max(...numbers);
+  const count = numbers.filter((num) => num === maxNumber).length;
+  return count;
+};
 
-// Desafio 6
-/*
-  Ok, essa foi mais complexa. O meu maior maior problema foi fazer a segunda função. Após faze-la tive que voltar na primeira e fazer a condicional para números negativos e agora que acabei esse desafio vou comemorar um som altão pra atrapalhar o vizinho a dormir (brinks kk ou será que não?).
-*/
-// let number = [0, 2, 2, 1, 0];
-function justOneHighNumber(number) {
-  let highest = number[0];
-
-  for (let index = 0; index < number.length - 1; index += 1) {
-    if (number[index] > highest) {
-      highest = number[index];
-    } if (number[index] < 0) {
-      highest = -1;
-    }
-  }
-  return highest;
-}
-
-function highestCount(number) {
-  let highest = justOneHighNumber(number);
-  let contador = 0;
-  for (let index of number) {
-    if (index === highest) {
-      contador += 1;
-    }
-  }
-  return contador;
-}
-highestCount([1, 9, 2, 3, 9, 5, 7]);
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
 /*
